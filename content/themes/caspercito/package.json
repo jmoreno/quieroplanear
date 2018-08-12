@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "casper@github:tryghost/Casper#2.1.0",
+        "scope": null,
+        "escapedName": "casper",
+        "name": "casper",
+        "rawSpec": "github:tryghost/Casper#2.1.0",
+        "spec": "github:tryghost/Casper#2.1.0",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:tryghost/Casper.git#2.1.0",
+          "sshUrl": "git+ssh://git@github.com/tryghost/Casper.git#2.1.0",
+          "httpsUrl": "git+https://github.com/tryghost/Casper.git#2.1.0",
+          "gitUrl": "git://github.com/tryghost/Casper.git#2.1.0",
+          "shortcut": "github:tryghost/Casper#2.1.0",
+          "directUrl": "https://raw.githubusercontent.com/tryghost/Casper/2.1.0/package.json"
+        }
+      },
+      "/tmp/build_ccf9da51f6d5f2c53782bbfd5a129d32"
+    ]
+  ],
+  "_from": "tryghost/Casper#2.1.0",
+  "_id": "casper@2.1.0",
+  "_inCache": true,
+  "_location": "/casper",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "casper@github:tryghost/Casper#2.1.0",
+    "scope": null,
+    "escapedName": "casper",
+    "name": "casper",
+    "rawSpec": "github:tryghost/Casper#2.1.0",
+    "spec": "github:tryghost/Casper#2.1.0",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:tryghost/Casper.git#2.1.0",
+      "sshUrl": "git+ssh://git@github.com/tryghost/Casper.git#2.1.0",
+      "httpsUrl": "git+https://github.com/tryghost/Casper.git#2.1.0",
+      "gitUrl": "git://github.com/tryghost/Casper.git#2.1.0",
+      "shortcut": "github:tryghost/Casper#2.1.0",
+      "directUrl": "https://raw.githubusercontent.com/tryghost/Casper/2.1.0/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/tryghost/Casper.git#ca325285bf7c68c8afa6f7ed97fb9c92a7fa5f20",
+  "_shasum": "34e19ef313a8a34d431282fe8af306db0a307fd5",
+  "_shrinkwrap": null,
+  "_spec": "casper@github:tryghost/Casper#2.1.0",
+  "_where": "/tmp/build_ccf9da51f6d5f2c53782bbfd5a129d32",
+  "author": {
+    "name": "Ghost Foundation",
+    "email": "hello@ghost.org",
+    "url": "https://ghost.org"
+  },
+  "bugs": {
+    "url": "https://github.com/TryGhost/Casper/issues"
+  },
+  "config": {
+    "posts_per_page": 25
+  },
+  "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+  "demo": "https://demo.ghost.io",
+  "dependencies": {},
+  "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "cssnano": "3.7.1",
+    "gulp": "3.9.1",
+    "gulp-livereload": "3.8.1",
+    "gulp-nodemon": "2.1.0",
+    "gulp-postcss": "6.1.1",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-util": "3.0.7",
+    "gulp-watch": "4.3.8",
+    "postcss-color-function": "2.0.1",
+    "postcss-custom-properties": "5.0.1",
+    "postcss-easy-import": "1.0.1"
+  },
+  "engines": {
+    "ghost": ">=1.2.0"
+  },
+  "gitHead": "ca325285bf7c68c8afa6f7ed97fb9c92a7fa5f20",
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "homepage": "https://github.com/TryGhost/Casper#readme",
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "casper",
+  "optionalDependencies": {},
+  "readme": "# Casper\n\nThe default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.\n\n&nbsp;\n\n![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)\n\n&nbsp;\n\n# First time using a Ghost theme?\n\nGhost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.\n\nWe've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.\n\n**The main files are:**\n\n- `default.hbs` - The main template file\n- `index.hbs` - Used for the home page\n- `post.hbs` - Used for individual posts\n- `page.hbs` - Used for individual pages\n- `tag.hbs` - Used for tag archives\n- `author.hbs` - Used for author archives\n\nOne really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:\n\n- `page-about.hbs` - Custom template for the `/about/` page\n- `tag-news.hbs` - Custom template for `/tag/news/` archive\n- `author-ali.hbs` - Custom template for `/author/ali/` archive\n\n\n# Development\n\nCasper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:\n\n`$ npm install`\n\n`$ gulp`\n\nNow you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.\n\n\n# PostCSS Features Used\n\n- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.\n- Variables - Simple pure CSS variables\n- [Color Function](https://github.com/postcss/postcss-color-function)\n\n\n# SVG Icons\n\nCasper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> \"icons/rss\"}}`.\n\nYou can add your own SVG icons in the same manner.\n\n\n# Copyright & License\n\nCopyright (c) 2013-2017 Ghost Foundation - Released under the [MIT license](LICENSE).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TryGhost/Casper.git"
+  },
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "version": "2.1.0"
+}
