@@ -69,7 +69,6 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
 
-					  {{#if config.disqusSubdomain }}	
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
                 <script>
@@ -79,13 +78,12 @@ into the {body} of the default.hbs template --}}
                     };
                     (function() {
                         var d = document, s = d.createElement('script');
-                        s.src = 'https://{{config.disqusSubdomain}}.disqus.com/embed.js';
+                        s.src = 'https://quieroplanear.disqus.com/embed.js';
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
             </section>
-            {{/if}}
 
         </article>
 
