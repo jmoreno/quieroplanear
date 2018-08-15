@@ -70,7 +70,8 @@ function createConfig() {
     },
     paths: {
       contentPath: path.join(appRoot, '/content/')
-    }
+    },
+    disqusSubdomain: process.env.DISQUS_SUBDOMAIN
   };
 
   return config;
