@@ -73,6 +73,8 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
             
+            {{disqus_subdomain}}
+            
 						{{#if @blog.is_private}}
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
