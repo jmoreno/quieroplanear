@@ -1,5 +1,4 @@
 var App = require('ghost-app'),
-
    	QuieroPlanear;
 
 QuieroPlanear = App.extend({
@@ -9,7 +8,8 @@ QuieroPlanear = App.extend({
 		    this.ghost.helpers.register('disqus_subdomain', this.handleDisqusSubdomain);
 		},
 		handleDisqusSubdomain: function() {
-		    return('quieroplanear');
+				var disqus_subdomain = process.env.DISQUS_SUBDOMAIN
+		    return(disqus_subdomain);
 		}
 		
 });
