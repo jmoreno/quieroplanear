@@ -72,7 +72,8 @@ into the {body} of the default.hbs template --}}
 
                 {{/author}}
             </footer>
-
+            
+						{{#if @blog.private}}
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
                 <script>
@@ -88,6 +89,7 @@ into the {body} of the default.hbs template --}}
                     })();
                 </script>
             </section>
+            {{/if}}
 
         </article>
 
