@@ -32,15 +32,15 @@ into the {body} of the default.hbs template --}}
             </figure>
             {{/if}}
 
+            <section class="post-full-content">
+                {{content}}
+            </section>
+
             <header class="post-full-header">
-	            <section class="post-full-content">
-	                {{content}}
+	            <section class="post-full-meta">
+	            	{{tags separator=" / " prefix="Etiquetado en: "}}
 	            </section>
             </header>
-
-            <section class="post-full-meta">
-            	{{tags separator=" / " prefix="Etiquetado en: "}}
-            </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
