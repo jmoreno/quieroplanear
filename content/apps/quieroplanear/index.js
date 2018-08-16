@@ -1,8 +1,8 @@
 var App = require('ghost-app'),
 
-   	QuieroPlanear;
+   	MyApp;
 
-QuieroPlanear = App.extend({
+MyApp = App.extend({
 
 		activate: function () {
 		    console.log('QuieroPlanear: activate()');
@@ -10,10 +10,9 @@ QuieroPlanear = App.extend({
 		}
 		
 		handleDisqusSubdomain: function() {
-				disqus_subdomain = process.env.DISQUS_SUBDOMAIN;
 		    return('quieroplanear');
 		}
 		
 });
 
-module.exports = QuieroPlanear;
+module.exports = MyApp;
