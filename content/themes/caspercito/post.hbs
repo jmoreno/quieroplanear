@@ -36,6 +36,10 @@ into the {body} of the default.hbs template --}}
                 {{content}}
             </section>
 
+            <section class="post-full-meta">
+            	{{tags separator=" / " prefix="Etiquetado en: "}}
+            </section>
+
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
             <section class="subscribe-form">
