@@ -73,7 +73,7 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
             
-						{{#if @blog.private}}
+						{{#if @blog.is_private}}
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
                 <script>
