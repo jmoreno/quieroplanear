@@ -10,7 +10,8 @@ QuieroPlanear = App.extend({
 		}
 		
 		handleDisqusSubdomain: function() {
-		    return(process.env.DISQUS_SUBDOMAIN);
+				disqus_subdomain = process.env.DISQUS_SUBDOMAIN;
+		    return('quieroplanear');
 		}
 		
 });
