@@ -6,7 +6,7 @@
   },
   "ghost": {
     "permissions": {
-      "helpers": ["disqus_subdomain"]
+      "helpers": ["disqus_subdomain","is_there_any_disqus_subdomain"]
     }
   }
 }
