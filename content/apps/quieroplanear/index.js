@@ -5,7 +5,7 @@ QuieroPlanear = App.extend({
 
 		activate: function () {
 		    console.log('QuieroPlanear: activate()');
-		    this.ghost.helpers.register('disqus_subdomain', this.handleDisqusSubdomain);
+		    this.app.helpers.register('disqus_subdomain', this.handleDisqusSubdomain);
 		},
 		handleDisqusSubdomain: function() {
 				var disqus_subdomain = process.env.DISQUS_SUBDOMAIN
