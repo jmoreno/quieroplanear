@@ -13,7 +13,7 @@ QuieroPlanear = App.extend({
 		    return(disqus_subdomain);
 		},
 		handleIsThereAnyDisqusSubdomain: function() {
-				return (!handleDisqusSubdomain() || /^\s*$/.test(handleDisqusSubdomain()));
+				return (!process.env.DISQUS_SUBDOMAIN || /^\s*$/.test(process.env.DISQUS_SUBDOMAIN));
 		}
 		
 });
