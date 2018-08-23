@@ -164,7 +164,7 @@ body {
 }
 
 .site-title:before {
-	  filter: blur(5px);
+	  filter: blur(5px) grayscale(1);
 }
 
 .site-logo {
@@ -172,7 +172,6 @@ body {
 }
 
 .site-description {
-    background: rgba(0,0,0,.4);
     z-index: 10;
     margin: 0;
     padding: 5px 0;
@@ -183,7 +182,7 @@ body {
 }
 
 .site-description:before {
-	  filter: blur(5px);
+	  filter: blur(5px) grayscale(1);
 }
 
 @media (max-width: 500px) {
