@@ -1,5 +1,17 @@
+/*
 .site-nav-left, .site-nav-right {
 	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0 1em;
+}
+
+.site-title, .site-description {
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0 1em;
+}
+*/
+.site-header {
 	background: rgba(0, 0, 0, 0.5);
 	padding: 0 1em;
 }
