@@ -34,7 +34,12 @@
                     {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank">Facebook</a>{{/if}}
                     {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank">Twitter</a>{{/if}}
                     <a href="https://instagram.com/quieroplanear" target="_blank">Instagram</a>
+						        {{#if @labs.subscribers}}
+				            <a href="#subscribe">Subscríbete</a>
+						        {{/if}}
+						        {{! -- 
                     <a href="https://ghost.org" target="_blank">Ghost</a>
+                    --}}
                 </nav>
             </div>
         </footer>
