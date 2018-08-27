@@ -1,4 +1,3 @@
-/*
 .site-nav-left, .site-nav-right {
 	border-radius: 5px;
 	background: rgba(0, 0, 0, 0.5);
@@ -10,9 +9,9 @@
 	background: rgba(0, 0, 0, 0.5);
 	padding: 0 1em;
 }
-*/
-.site-header-content {
+
+/* .site-header-content {
 	border-radius: 5px;
 	background: rgba(0, 0, 0, 0.5);
 	padding: 0 1em;
-}
+} */
