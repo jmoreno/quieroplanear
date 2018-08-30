@@ -1,0 +1,55 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+<header class="site-header outer">
+    <div class="inner">
+        {{> "site-nav"}}
+    </div>
+</header>
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+            <header class="post-full-header">
+	              <h2 class="post-full-title">A lo mejor con alguna de estas etiquetas es suficiente:</h2>
+            </header>
+
+            <section class="post-full-meta">
+            	{{tags separator="&nbsp;/&nbsp;" prefix=""}}
+            </section>
+
+            <header class="post-full-header">
+                <h2 class="post-full-title">Buscar planes</h2>
+            </header>
+
+            <section class="post-full-content">
+			        <form style="text-align:center">
+			        	<input id="search-field" />
+			        	<input type="submit" value="Buscar">
+			        </form>
+			        <section id="results" style="text-align:center"></section>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+{{/contentFor}}
