@@ -3,49 +3,34 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer">
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+<header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         {{> "site-nav"}}
+        <div class="site-header-content">
+            <h1 class="site-title">{{name}}</h1>
+            <h2 class="site-description">Puedes usar las etiquetas:</h2>
+            <section class="post-full-meta">
+            	{{tags separator="&nbsp;/&nbsp;"}}
+            </section>
+        </div>
     </div>
 </header>
 
-{{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
-
+{{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
-        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
-
+		<article class="post-full no-image">
             <header class="post-full-header">
-              <h2 class="subscribe-form-title">Buscar planes</h2>
+                <h2 class="post-full-title">O buscar en todos los posts:</h2>
             </header>
-
-            <section class="subscribe-form">
-			        <form style="text-align:center">
-			        	<div class="form-group">
-				        	<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-input" />
-			        	</div>
-			        	<button type="submit" value="Buscar">Buscar</button>
-			        </form>
-			        <section id="results" style="text-align:center"></section>
-            </section>
-
-            <footer class="post-full-footer">
-	              <h2 class="post-full-title">También puedes utilizar nuestras etiquetas:</h2>
-	              {{#if tags}}
-	              <ul>
-	              {{#foreach tags}}
-	              	<li><a href="{{url}}" title="{{name}}" class="author-card-button">{{name}}</a></li>
-	              {{/foreach}}
-	              {{/if}}
-	              </ul>
-                <div class="post-full-footer-right">
-                </div>
-            </footer>
-
-        </article>
-
+			<form style="text-align:center">
+				<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-search-field" />
+				<input type="submit" value="Buscar" />
+			</form>
+			<section id="results" style="text-align:center"></section>
+		</article>
     </div>
 </main>
 
