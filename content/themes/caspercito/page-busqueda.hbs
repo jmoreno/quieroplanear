@@ -18,15 +18,6 @@ into the {body} of the default.hbs template --}}
 
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-            <header class="post-full-header">
-                <h1 class="post-full-title">{{title}}</h1>
-            </header>
-
-            {{#if feature_image}}
-            <figure class="post-full-image" style="background-image: url({{feature_image}})">
-            </figure>
-            {{/if}}
-
             <section class="post-full-content">
 			        <form style="text-align:center">
 			        	<input id="search-field" />
