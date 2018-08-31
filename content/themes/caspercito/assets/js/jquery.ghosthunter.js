@@ -3166,8 +3166,8 @@ lunr.QueryParser.parseBoost = function (parser) {
     resultsData     : false,
     onPageLoad      : true,
     onKeyUp       : false,
-    result_template   : "<a id='gh-{{ref}}' class='gh-search-item' href='{{link}}'><p><h2>{{title}}</h2><h4>{{prettyPubDate}}</h4></p></a>",
-    info_template   : "<p>Number of posts found: {{amount}}</p>",
+    result_template   : "<a id='gh-{{ref}}' class='gh-search-item' href='{{link}}'><p><h2>{{title}}</h2><h4>{{pubDate}}</h4></p></a>",
+    info_template   : "<p>Número de posts encontrados: {{amount}}</p>",
     displaySearchInfo : true,
     zeroResultsInfo   : true,
     before        : false,
@@ -3181,8 +3181,8 @@ lunr.QueryParser.parseBoost = function (parser) {
   };
   var prettyDate = function(date) {
     var d = new Date(date);
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
+    var monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "diciembre"];
+      return d.getDate() + ' de ' + monthNames[d.getMonth()] + ' de ' + d.getFullYear();
   };
 
   var getSubpathKey = function(str) {
