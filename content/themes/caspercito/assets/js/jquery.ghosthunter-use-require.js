@@ -200,7 +200,7 @@
 	var prettyDate = function(date) {
 		var d = new Date(date);
 		var monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-			return d.getDate() + ' ' + monthNames[d.getMonth()] + ' ' + d.getFullYear();
+			return d.getDate() + ' de ' + monthNames[d.getMonth()] + ' de ' + d.getFullYear();
 	};
 
 	var getSubpathKey = function(str) {

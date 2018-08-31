@@ -18,24 +18,31 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
-	              <h2 class="post-full-title">A lo mejor con alguna de estas etiquetas es suficiente:</h2>
+              <h2 class="subscribe-form-title">Buscar planes</h2>
             </header>
 
-            <section class="post-full-meta">
-            	{{tags separator="&nbsp;/&nbsp;" prefix=""}}
-            </section>
-
-            <header class="post-full-header">
-                <h2 class="post-full-title">Buscar planes</h2>
-            </header>
-
-            <section class="post-full-content">
+            <section class="subscribe-form">
 			        <form style="text-align:center">
-			        	<input id="search-field" />
-			        	<input type="submit" value="Buscar">
+			        	<div class="form-group">
+				        	<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-input" />
+			        	</div>
+			        	<button type="submit" value="Buscar">Buscar</button>
 			        </form>
 			        <section id="results" style="text-align:center"></section>
             </section>
+
+            <footer class="post-full-footer">
+	              <h2 class="post-full-title">También puedes utilizar nuestras etiquetas:</h2>
+	              {{#if tags}}
+	              <ul>
+	              {{#foreach tags}}
+	              	<li><a href="{{url}}" title="{{name}}" class="author-card-button">{{name}}</a></li>
+	              {{/foreach}}
+	              {{/if}}
+	              </ul>
+                <div class="post-full-footer-right">
+                </div>
+            </footer>
 
         </article>
 
