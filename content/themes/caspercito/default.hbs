@@ -79,15 +79,7 @@
     
     {{!-- ghostHunter se encarga de buscar texto dentro del blog --}}
     <script type="text/javascript" src="{{asset "js/jquery.ghosthunter.js"}}"></script>
-    <script>
-        $("#search-field").ghostHunter({
-            results   : "#results",
-            onKeyUp  : true,
-            zeroResultsInfo : false,
-            result_template : "<a id='gh-{{ref}}' class='gh-search-item' href='{{link}}'><p><h2>{{title}}</h2><h4>{{pubDate}}</h4></p></a>",
-            info_template : "<p>Número de posts encontrados: {{amount}}</p>",
-        });
-    </script>
+    <script type="text/javascript" src="{{asset "js/ghost-search.js"}}"></script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
