@@ -18,16 +18,17 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
             <header class="post-full-header">
-	              <h2 class="post-full-title">A lo mejor con alguna de estas etiquetas es suficiente:</h2>
+                <h2 class="post-full-title">Etiquetas</h2>
+                <section class="post-full-meta">
+                    {{tags separator="&nbsp;/&nbsp;" prefix=""}}
+                </section>
+                <h1 class="post-full-title">{{title}}</h1>
             </header>
 
-            <section class="post-full-meta">
-            	{{tags separator="&nbsp;/&nbsp;" prefix=""}}
-            </section>
-
-            <header class="post-full-header">
-                <h2 class="post-full-title">Buscar planes</h2>
-            </header>
+            {{#if feature_image}}
+            <figure class="post-full-image" style="background-image: url({{feature_image}})">
+            </figure>
+            {{/if}}
 
             <section class="post-full-content">
 			        <form style="text-align:center">
