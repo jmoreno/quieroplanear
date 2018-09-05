@@ -11,8 +11,8 @@ into the {body} of the default.hbs template --}}
         <div class="site-header-content">
             <h1 class="site-title">{{name}}</h1>
             <h2 class="site-description">Puedes usar las etiquetas:</h2>
-            <section class="post-full-meta">
-            	{{tags separator="&nbsp;/&nbsp;"}}
+            <section class="quieroplanear-section">
+            	{{tags separator="&nbsp;|&nbsp;"}}
             </section>
         </div>
     </div>
@@ -22,14 +22,16 @@ into the {body} of the default.hbs template --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 		<article class="post-full no-image">
-            <header class="post-full-header">
-                <h2 class="post-full-title">O buscar en todos los posts:</h2>
-            </header>
-			<form style="text-align:center">
-				<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-search-field" />
-				<input type="submit" value="Buscar" />
-			</form>
+      <header class="post-full-header">
+      		<h2 class="post-full-title">O buscar en todos los posts:</h2>
+      </header>
+      <section class="quieroplanear-section">
+				<form style="text-align:center">
+					<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-search-field" />
+					<input type="submit" value="Buscar" />
+				</form>
 			<section id="results" style="text-align:center"></section>
+      </section>      
 		</article>
     </div>
 </main>
