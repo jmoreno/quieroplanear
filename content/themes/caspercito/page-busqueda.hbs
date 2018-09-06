@@ -12,7 +12,7 @@ into the {body} of the default.hbs template --}}
             <h1 class="site-title">{{name}}</h1>
             <h2 class="site-description">Puedes usar las etiquetas:</h2>
             <section class="quieroplanear-section">
-            	{{tags separator="&nbsp;|&nbsp;"}}
+            	{{tags separator="&nbsp;/&nbsp;"}}
             </section>
         </div>
     </div>
@@ -23,15 +23,15 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
 		<article class="post-full no-image">
       <header class="post-full-header">
-      		<h2 class="post-full-title">O buscar en todos los posts:</h2>
+          <h2 class="post-full-title">O buscar en todos los posts:</h2>
+			<form style="text-align:center" class="quieroplanear-section">
+				<input id="search-field" type="text" placeholder="¿qué quieres planear?" />
+{{!-- The main content area 
+				<input type="submit" value="Buscar" />
+--}}
+			</form>
       </header>
-      <section class="quieroplanear-section">
-				<form style="text-align:center">
-					<input id="search-field" placeholder="¿qué quieres planear?" class="subscribe-form-search-field" />
-					<input type="submit" value="Buscar" />
-				</form>
 			<section id="results" style="text-align:center"></section>
-      </section>      
 		</article>
     </div>
 </main>
