@@ -73,8 +73,12 @@ into the {body} of the default.hbs template --}}
             </footer>
             
             <section class="post-full-comments">
-								<script data-isso="https://quieroplanear-discuss.herokuapp.com/pg-discuss" src="pg-discuss/embed.min.js"></script>
-								<section data-isso-id='{{url absolute="true"}}' id="isso-thread"></section>
+            	<div id="coral_talk_stream"></div>
+								<script src="https://quieroplanear-comentarios.herokuapp.com/static/embed.js" async onload="
+								  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+								    talk: 'https://quieroplanear-comentarios.herokuapp.com/'
+								  });
+								"></script>
             </section>
 
         </article>
