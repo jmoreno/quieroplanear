@@ -2,7 +2,6 @@
 
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
-
 <header class="site-header outer">
     <div class="inner">
         {{> "site-nav"}}
@@ -73,23 +72,13 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
             
-						{{#is_there_any_disqus_subdomain}}
             <section class="post-full-comments">
-                <div id="disqus_thread"></div>
-                <script>
-                    var disqus_config = function () {
-                        this.page.url = '{{url absolute="true"}}';
-                        this.page.identifier = 'ghost-{{comment_id}}';
-                    };
-                    (function() {
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://{{disqus_subdomain}}.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-            </section>
-            {{/is_there_any_disqus_subdomain}}
+	        		<div id="coral_talk_stream"></div>
+							<script src="https://talk.quieroplanear.es/static/embed.js" async onload="
+							  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+							    talk: 'https://talk.quieroplanear.es/'
+							  });"></script>
+						</section>
 
         </article>
 
