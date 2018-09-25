@@ -72,11 +72,13 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
             
-        		<div id="coral_talk_stream"></div>
-						<script src="https://talk.quieroplanear.es/static/embed.js" async onload="
-						  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
-						    talk: 'https://talk.quieroplanear.es/'
-						  });"></script>
+            <section class="post-full-comments">
+	        		<div id="coral_talk_stream"></div>
+							<script src="https://talk.quieroplanear.es/static/embed.js" async onload="
+							  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+							    talk: 'https://talk.quieroplanear.es/'
+							  });"></script>
+						</section>
 
         </article>
 
