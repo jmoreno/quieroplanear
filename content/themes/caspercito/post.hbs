@@ -72,10 +72,11 @@ into the {body} of the default.hbs template --}}
                 {{/author}}
             </footer>
             
-            <section class="post-full-comments">
-								<script data-isso="https://quieroplanear-discuss.herokuapp.com/pg-discuss" src="pg-discuss/embed.min.js"></script>
-								<section data-isso-id='{{url absolute="true"}}' id="isso-thread"></section>
-            </section>
+        		<div id="coral_talk_stream"></div>
+						<script src="https://talk.quieroplanear.es/static/embed.js" async onload="
+						  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+						    talk: 'https://talk.quieroplanear.es/'
+						  });"></script>
 
         </article>
 
