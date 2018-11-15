@@ -73,21 +73,12 @@ into the {body} of the default.hbs template --}}
             </footer>
             
             <section class="post-full-comments">
-                <a id="nodebb-comments"></a>
-                <script type="text/javascript">
-                var nbb = {};
-                nbb.url = '//foro.quieroplanear.es';
-                nbb.cid = 5;
-                (function() {
-                nbb.articleID = '{{../post.id}}'; nbb.title = '{{../post.title}}';
-                nbb.tags = [{{#../post.tags}}"{{name}}",{{/../post.tags}}];
-                nbb.script = document.createElement('script'); nbb.script.type = 'text/javascript'; nbb.script.async = true;
-                nbb.script.src = nbb.url + '/plugins/nodebb-plugin-blog-comments/lib/ghost.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(nbb.script);
-                })();
-                </script>
-                <script id="nbb-markdown" type="text/markdown">{{../post.markdown}}</script>
-                <noscript>Please enable JavaScript to view comments</noscript>
+                <div id="coral_talk_stream"></div>
+                <script src="https://comentarios.quieroplanear.es/static/embed.js" async onload="
+                Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+                    talk: 'https://comentarios.quieroplanear.es/'
+                });
+                "></script>
 			</section>
 
         </article>
