@@ -10,10 +10,10 @@
   "private": true,
   "version": "1.7.1",
   "dependencies": {
-  	"ghost-app": "0.0.2",
     "casper": "github:tryghost/Casper#2.6.1",
-    "ghost": "^2.1.0",
-    "ghost-storage-adapter-s3": "^2.3.0",
+    "ghost": "^2.15.0",
+    "ghost-app": "0.0.2",
+    "ghost-storage-adapter-s3": "^2.8.0",
     "mysql": "^2.14.1"
   },
   "engines": {
