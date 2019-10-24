@@ -8,16 +8,21 @@
   },
   "bugs": "https://github.com/TryGhost/Ghost/issues",
   "private": true,
-  "version": "1.7.1",
+  "version": "1.25.5",
   "dependencies": {
+    "attila": "github:zutrinken/attila#master",
     "casper": "github:tryghost/Casper#master",
-    "ghost": "^2.25.1",
-    "ghost-app": "0.0.3",
-    "ghost-storage-adapter-s3": "^2.8.0",
-    "mysql": "^2.17.1"
+    "editorial": "github:tryghost/Editorial#master",
+    "ghost": "^3.0.0",
+    "ghost-storage-adapter-s3": "^2.3.0",
+    "liebling": "github:eddiesigner/liebling#master",
+    "london": "github:tryghost/London#master",
+    "massively": "github:tryghost/Massively#master",
+    "mysql": "^2.17.1",
+    "the_shell": "github:mityalebedev/The-Shell#master"
   },
   "engines": {
-    "node": "8.x"
+    "node": "10.x"
   },
   "scripts": {
     "start": "node server.js"
