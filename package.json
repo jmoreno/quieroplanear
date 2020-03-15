@@ -17,10 +17,9 @@
     "ghost-storage-adapter-s3": "^2.3.0",
     "liebling": "github:eddiesigner/liebling#master",
     "london": "github:tryghost/London#master",
+    "lyra": "github:tryghost/Lyra#master",
     "massively": "github:tryghost/Massively#master",
-    "mysql": "^2.18.1",
-    "the-shell": "github:mityalebedev/The-Shell#master",
-    "the_shell": "github:mityalebedev/The-Shell#master"
+    "mysql": "^2.18.1"
   },
   "engines": {
     "node": "10.x"
