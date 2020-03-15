@@ -19,7 +19,8 @@
     "london": "github:tryghost/London#master",
     "lyra": "github:tryghost/Lyra#master",
     "massively": "github:tryghost/Massively#master",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "the_shell": "github:mityalebedev/The-Shell#master"
   },
   "engines": {
     "node": "10.x"
